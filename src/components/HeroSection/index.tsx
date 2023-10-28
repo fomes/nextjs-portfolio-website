@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { Link as SLink } from "react-scroll";
 
 export function HeroSection() {
   return (
@@ -31,12 +32,16 @@ export function HeroSection() {
             Desenvolvedor Full Stack especialista em React.
           </p>
           <div>
-            <Link
-              href="/contact"
-              className="px-6 inline-block py-3 w-full font-medium sm:w-fit rounded-full mr-4 bg-purple-500 hover:bg-blue-500 text-white hover:text-black transition-all duration-300"
+            <SLink
+              spy
+              smooth
+              offset={-20}
+              duration={500}
+              to="contact"
+              className="px-6 inline-block py-3 w-full font-medium sm:w-fit rounded-full mr-4 bg-purple-500 hover:bg-blue-500 text-white hover:text-black transition-all duration-300 cursor-pointer"
             >
               Hire Me
-            </Link>
+            </SLink>
             <Link
               href="/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-blue-500 hover:bg-slate-800 text-white mt-3"
