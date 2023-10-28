@@ -1,18 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import GithubIcon from "../../../public/icons/github-icon.svg";
 import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
+import { SiGmail } from "react-icons/si";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function ContactSection() {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
-
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-  };
-
   return (
     <section
       id="contact"
@@ -42,74 +37,16 @@ export default function ContactSection() {
             <Image
               src={LinkedinIcon}
               alt="Linkedin Icon"
-              className="hover:scale-110 transition-all duration-300"
+              className="hover:scale-110 transition-all duration-300 mr-1"
+            />
+          </Link>
+          <Link href="mailto:fgomesdeluna@gmail.com" target="_blank">
+            <SiGmail
+              size={48}
+              className="text-white hover:scale-110 transition-all duration-300"
             />
           </Link>
         </div>
-      </div>
-      <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
-          </p>
-        ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
-            <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
-              >
-                Your email
-              </label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                required
-                autoComplete="on"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Subject
-              </label>
-              <input
-                name="subject"
-                type="text"
-                id="subject"
-                required
-                autoComplete="on"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
-            >
-              Send Message
-            </button>
-          </form>
-        )}
       </div>
     </section>
   );
