@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" id="#">
       <body className={twMerge(inter.className, "bg-[#121212]")}>
         {children}
       </body>

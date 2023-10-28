@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
+import {
+  CodeBracketIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
 
 interface ProjectCardProps {
   imgUrl: string;
@@ -27,16 +30,22 @@ export default function ProjectCard({
           <Link
             href={gitUrl}
             target="_blank"
-            className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white transition-all duration-300 group/link"
+            className="h-14 w-14 mr-2 relative rounded-full bg-white/70 hover:bg-white transition-all duration-300 group/link"
           >
-            <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
+            <CodeBracketIcon
+              strokeWidth={2}
+              className="h-8 w-8 text-blue-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+            />
           </Link>
           <Link
             href={previewUrl}
             target="_blank"
-            className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+            className="h-14 w-14 relative rounded-full bg-white/70 hover:bg-white group/link"
           >
-            <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
+            <MagnifyingGlassIcon
+              strokeWidth={2}
+              className="h-8 w-8 text-blue-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer"
+            />
           </Link>
         </div>
       </div>

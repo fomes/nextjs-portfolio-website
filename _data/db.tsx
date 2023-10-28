@@ -25,7 +25,7 @@ export const userData = [
   },
   {
     title: "Experience",
-    id: "experiece",
+    id: "experience",
     content: (
       <ul className="list-disc pl-2">
         <li>Front End Developer - Dell LEAD</li>
@@ -33,6 +33,10 @@ export const userData = [
         <li>Front End Developer - Loop3</li>
       </ul>
     ),
+  },
+  {
+    about:
+      "I have been working with technology for over 8 years and 3 years ago I chose to migrate from the QA area to Developer, becoming interested in a Full Stack career. Experience with Javascript, Typescript, NodeJs, ReactJs based on the last 3 experiences I had. I also have experience with personal projects and Full Stack training course projects at Trybe. I have good learning capacity and good performance in teamwork. Always willing to learn and improve my knowledge.",
   },
 ];
 

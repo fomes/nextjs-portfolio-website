@@ -13,19 +13,19 @@ import { MenuOverlay } from "../MenuOverlay";
 const navLinks = [
   {
     title: "Home",
-    path: "#home",
+    path: "#",
   },
   {
     title: "About",
-    path: "#about",
+    path: "about",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "projects",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "contact",
   },
 ];
 export function Navbar() {
@@ -38,7 +38,7 @@ export function Navbar() {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          <CommandLineIcon className="w-10 hover:scale-110" />
+          <CommandLineIcon className="w-10 hover:scale-110 transition-all duration-300" />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -61,7 +61,7 @@ export function Navbar() {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <NavLink to={link.path} title={link.title} />
               </li>
             ))}
           </ul>

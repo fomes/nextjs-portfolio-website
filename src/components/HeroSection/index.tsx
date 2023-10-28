@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export function HeroSection() {
   return (
-    <section className="lg:py-16" id="#">
+    <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12 xs:flex flex-col">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
