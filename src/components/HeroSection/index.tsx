@@ -18,7 +18,7 @@ export function HeroSection() {
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600">
-              Hello, I'm Felipe
+              Hello, I&apos;m Felipe
             </span>
             <br></br>
             <TypeAnimation
