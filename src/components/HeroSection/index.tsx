@@ -33,7 +33,7 @@ export function HeroSection() {
           <div>
             <Link
               href="/contact"
-              className="px-6 inline-block py-3 w-full font-medium sm:w-fit rounded-full mr-4 bg-gradient-to-br from-purple-500 to-blue-500 hover:bg-slate-200 hover:bg-gradient-radial text-white hover:text-black transition-all duration-300"
+              className="px-6 inline-block py-3 w-full font-medium sm:w-fit rounded-full mr-4 bg-purple-500 hover:bg-blue-500 text-white hover:text-black transition-all duration-300"
             >
               Hire Me
             </Link>
