@@ -10,10 +10,6 @@ export default function ProjectsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag: string) => {
-    setTag(newTag);
-  };
-
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
