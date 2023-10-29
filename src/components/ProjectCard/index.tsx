@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import {
   CodeBracketIcon,
-  MagnifyingGlassIcon,
+  EyeIcon
 } from "@heroicons/react/24/outline";
 
 interface ProjectCardProps {
@@ -23,28 +23,28 @@ export default function ProjectCard({
   return (
     <div>
       <div
-        className="h-52 md:h-72 rounded-t-xl relative group hover:opacity-60 transition-all duration-300"
+        className="h-52 md:h-72 rounded-t-xl relative flex justify-center items-center group"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
       >
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex">
+        <div className="items-center justify-center rounded-ful hidden group-hover:flex">
           <Link
             href={gitUrl}
             target="_blank"
-            className="h-14 w-14 mr-2 relative rounded-full bg-white/70 hover:bg-white transition-all duration-300 group/link"
+            className="h-14 w-14 mr-2 rounded-full bg-white flex justify-center items-center hover:scale-110 transition-all duration-300"
           >
             <CodeBracketIcon
               strokeWidth={2}
-              className="h-8 w-8 text-blue-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+              className="h-8 w-8 text-blue-500 cursor-pointer"
             />
           </Link>
           <Link
             href={previewUrl}
             target="_blank"
-            className="h-14 w-14 relative rounded-full bg-white/70 hover:bg-white group/link"
+            className="h-14 w-14 rounded-full bg-white flex justify-center items-center hover:scale-110 transition-all duration-300"
           >
-            <MagnifyingGlassIcon
+            <EyeIcon
               strokeWidth={2}
-              className="h-8 w-8 text-blue-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer"
+              className="h-8 w-8 text-blue-500 cursor-pointer"
             />
           </Link>
         </div>
